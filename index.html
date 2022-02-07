@@ -7,6 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Picture This!</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .res-swap{
+        max-width:100%;
+    }
+
+    picture img{
+        max-width:100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -15,7 +24,18 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    
+    <picture class="below">
+      <source srcset="images/museum-below960.jpg"
+              media="(max-width: 959px)" >
+      <img src="images/museum-below960.jpg" alt="Museum">
+    </picture>
+
+    <picture class="above">
+      <source srcset="images/museum-above960.jpg"
+              media="(min-width: 960px)" >
+      <img src="images/museum-above960.jpg" alt="Museum">
+    </picture>
 
   </header>
 </body>
